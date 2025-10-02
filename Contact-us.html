@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Royal Tourism - Luxury Goa Tour</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #bafcff;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* ---------------- TOP CONTACT HEADER ---------------- */
+    .top-header {
+      background-color: #ff610e;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 10px 20px;
+    }
+
+    .contact-group {
+      display: flex;
+      align-items: center;
+      margin-right: 40px;
+    }
+
+    .contact-group img {
+      width: 22px;
+      height: 22px;
+      margin-right: 6px;
+    }
+
+    .contact-group span {
+      font-size: 16px;
+      color: white;
+      font-weight: bold;
+      font-family: monospace;
+    }
+
+    /* ---------------- NAVIGATION BAR ---------------- */
+    .navigation-bar {
+      background-color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 40px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .navigation-bar img {
+      height: 60px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-size: 18px;
+      color: #333;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #ff610e;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: white;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.15);
+      z-index: 10;
+      border-radius: 6px;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      color: #333;
+      font-size: 14px;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f2f2f2;
+      color: #ff610e;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* ---------------- CONTACT PAGE SECTION ---------------- */
+    .contact-section {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .contact-section h2 {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #003c32;
+    }
+
+    .contact-info {
+      font-size: 18px;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .contact-info a {
+      color: #ff610e;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+
+    .map-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+      border-radius: 10px;
+    }
+
+    /* ---------------- PROFESSIONAL FOOTER ---------------- */
+    footer {
+      background-color: #003c32;
+      color: #fff;
+      padding: 40px 20px 20px;
+      font-family: Arial, sans-serif;
+    }
+
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-column {
+      flex: 1 1 250px;
+      margin: 10px;
+    }
+
+    .footer-column h4 {
+      margin-bottom: 15px;
+      font-size: 22px;
+      color: #ff610e;
+    }
+
+    .footer-column p,
+    .footer-column a {
+      font-size: 14px;
+      color: #ddd;
+      text-decoration: none;
+      line-height: 1.6;
+    }
+
+    .footer-column a:hover {
+      color: #ff610e;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      border-top: 1px solid #444;
+      margin-top: 20px;
+      padding-top: 10px;
+      font-size: 20px;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top contact header -->
+  <div class="top-header">
+    <div class="contact-group">
+      <img src="Contact.png" alt="Contact">
+      <span>+91 8240147994</span>
+    </div>
+    <div class="contact-group">
+      <img src="E-mail.png" alt="E-mail">
+      <span>royaltourism863@gmail.com</span>
+    </div>
+  </div>
+
+  <!-- Navigation bar -->
+  <div class="navigation-bar">
+    <img src="logohorizontal.png" alt="Royal Tourism Logo">
+    <div class="nav-links">
+      <a href="Home.html">Home</a>
+      <a href="About.html">About us</a>
+  
+      <div class="dropdown">
+        <a href="#">Domestic Trips</a>
+        <div class="dropdown-content">
+          <a href="NORTH-MH.html">Shirdi–Ellora–Nashik Darshan Tour</a>
+          <a href="Northeast.html">Nagaland - Mizoram - Manipur Trip</a>
+          <a href="GOA.html">Luxury Goa Trip</a>
+        </div>
+      </div>
+       <div class="dropdown">
+        <a href="#">International Trips</a>
+        <div class="dropdown-content">
+          <a href="Bali.html">Bali Tour</a>
+          <a href="Bangkok.html">Bangkok-Pattaya Tour</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- CONTACT SECTION -->
+  <div class="contact-section">
+    <h2>Contact Us</h2>
+    <div class="contact-info">
+      <p><strong>📍 Address:</strong> Shop -16, Siddha Arcade, Siddha Town, Rajarhat, Gopalpur, North 24 Parganas, WB - 700136</p>
+      <p><strong>📧 Email:</strong> <a href="mailto:royaltourism863@gmail.com">royaltourism863@gmail.com</a></p>
+      <p><strong>📞 Phone:</strong> <a href="tel:+918240147994">+91 8240147994</a></p>
+      <p><strong>💬 WhatsApp:</strong> <a href="https://wa.me/918240147994" target="_blank">Chat with us on WhatsApp</a></p>
+    </div>
+
+    <!-- Google Maps Embed -->
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3687.259656922646!2d88.45262957508506!3d22.64868827945952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f89f40029fc5b9%3A0xc027f2835a969002!2sRoyal%20Tourism(Tours%20and%20Travels)!5e0!3m2!1sen!2sin!4v1727611229472!5m2!1sen!2sin" 
+      width="100%" 
+      height="450" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+
+  </div>
+
+
+  <!-- Professional Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-column">
+        <h4>Royal Tourism</h4>
+        <p>We provide safe, comfortable, and memorable travel experiences across India. Your journey is our responsibility.</p>
+      </div>
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <ul style="padding-left:0; list-style:none;">
+          <li><a href="Home.html">Home</a></li>
+          <li><a href="About.html">About Us</a></li>
+          <li><a href="Northeast.html">Domestic Trips</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Contact</h4>
+        <p>📞 <a href="tel:+918240147994">+91 8240147994</a></p>
+        <p>📧 <a href="mailto:royaltourism863@gmail.com">royaltourism863@gmail.com</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Royal Tourism | All Rights Reserved | Created with ❤️ by Aavriti</p>
+    </div>
+  </footer>
+
+</body>
+</html>

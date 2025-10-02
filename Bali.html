@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Royal Tourism - Luxury Goa Tour</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #bafcff;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* ---------------- TOP CONTACT HEADER ---------------- */
+    .top-header {
+      background-color: #ff610e;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 10px 20px;
+    }
+
+    .contact-group {
+      display: flex;
+      align-items: center;
+      margin-right: 40px;
+    }
+
+    .contact-group img {
+      width: 22px;
+      height: 22px;
+      margin-right: 6px;
+    }
+
+    .contact-group span {
+      font-size: 16px;
+      color: white;
+      font-weight: bold;
+      font-family: monospace;
+    }
+
+    /* ---------------- NAVIGATION BAR ---------------- */
+    .navigation-bar {
+      background-color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 40px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .navigation-bar img {
+      height: 60px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-size: 18px;
+      color: #333;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #ff610e;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: white;
+      min-width: 180px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.15);
+      z-index: 10;
+      border-radius: 6px;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      color: #333;
+      font-size: 14px;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f2f2f2;
+      color: #ff610e;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* ---------------- ITINERARY SECTION ---------------- */
+    .itinerary {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .itinerary h2 {
+      text-align: center;
+      color: #003c32;
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
+
+    .day-card {
+      background: white;
+      border-left: 6px solid #ff610e;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .day-card:hover {
+      transform: scale(1.02);
+    }
+
+    .day-card h3 {
+      color: #007278;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 22px;
+    }
+
+    .day-card p {
+      color: #333;
+      line-height: 1.6;
+      margin-left: 28px;
+    }
+
+    /* ---------------- PACKAGE SECTION ---------------- */
+    .package h3 {
+      text-align: center;
+      color: #003c32;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .package-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .package-card {
+      padding: 20px;
+      border-radius: 10px;
+      width: 250px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .package-card h4 {
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    .package-card p {
+      margin: 10px 0;
+      font-size: 16px;
+    }
+
+    .package-note {
+      text-align: center;
+      margin-top: 15px;
+      font-style: italic;
+      color: #003c32;
+    }
+
+    /* ---------------- PROFESSIONAL FOOTER ---------------- */
+    footer {
+      background-color: #003c32;
+      color: #fff;
+      padding: 40px 20px 20px;
+      font-family: Arial, sans-serif;
+    }
+
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-column {
+      flex: 1 1 250px;
+      margin: 10px;
+    }
+
+    .footer-column h4 {
+      margin-bottom: 15px;
+      font-size: 22px;
+      color: #ff610e;
+    }
+
+    .footer-column p,
+    .footer-column a {
+      font-size: 14px;
+      color: #ddd;
+      text-decoration: none;
+      line-height: 1.6;
+    }
+
+    .footer-column a:hover {
+      color: #ff610e;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      border-top: 1px solid #444;
+      margin-top: 20px;
+      padding-top: 10px;
+      font-size: 20px;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top contact header -->
+  <div class="top-header">
+    <div class="contact-group">
+      <img src="Contact.png" alt="Contact">
+      <span>+91 8240147994</span>
+    </div>
+    <div class="contact-group">
+      <img src="E-mail.png" alt="E-mail">
+      <span>royaltourism863@gmail.com</span>
+    </div>
+  </div>
+
+  <!-- Navigation bar -->
+  <div class="navigation-bar">
+    <img src="logohorizontal.png" alt="Royal Tourism Logo">
+    <div class="nav-links">
+      <a href="Home.html">Home</a>
+      <a href="About.html">About us</a>
+      <div class="dropdown">
+        <a href="#">Domestic Trips</a>
+        <div class="dropdown-content">
+          <a href="NORTH-MH.html">Shirdi–Ellora–Nashik Darshan Tour</a>
+          <a href="Northeast.html">Nagaland - Mizoram - Manipur Trip</a>
+          <a href="GOA.html">Luxury Goa Trip</a>
+          <a href="KA-GA.html">Coastal Karnataka-Goa Trip</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="#">International Trips</a>
+        <div class="dropdown-content">
+          <a href="Bangkok.html">Bangkok–Pattaya Tour</a>
+         
+        </div>
+      </div>
+      <a href="Contact-us.html">Contact Us</a>
+    </div>
+  </div>
+
+  <!-- Itinerary Section -->
+  <div class="itinerary">
+    <h2>Bali Tour (6 Days)</h2>
+
+    <div class="day-card">
+      <h3>🌊 Day 1: Arrival in Kuta</h3>
+      <p>Arrive at Ngurah Rai Airport, then transfer to your hotel in Kuta. Enjoy surfing at Kuta Beach and later visit Finn's Beach Club (entry not included). Overnight stay in Kuta.</p>
+    </div>
+
+    <div class="day-card">
+      <h3>⛩️ Day 2: Transfer to Ubud</h3>
+      <p>After check-out, visit Ulun Danu Temple on Lake Bratan and Handara Gate. Later, transfer to Ubud and check in for overnight stay.</p>
+    </div>
+
+    <div class="day-card">
+      <h3>🌄 Day 3: Mount Batur & Rice Terraces</h3>
+      <p>Early morning trek to Mount Batur for sunrise views. Visit rice terraces, experience the Bali Swing, and see Tanah Lot Temple at sunset. Return to Kuta for overnight stay.</p>
+    </div>
+
+    <div class="day-card">
+      <h3>🏄‍♂️ Day 4: Water Sports & Uluwatu</h3>
+      <p>Enjoy water sports at Benoa Bay (banana boat, parasailing, sea walking). In the evening, visit Uluwatu Temple for a cliffside sunset view. Return to hotel.</p>
+    </div>
+
+    <div class="day-card">
+      <h3>🏝️ Day 5: Nusa Penida West Tour</h3>
+      <p>Take a speedboat from Sanur Harbor to Nusa Penida. Visit Kelingking Beach, Angel’s Billabong, Broken Bay, and snorkel at Bubu Beach. Return to Kuta for overnight stay.</p>
+    </div>
+
+    <div class="day-card">
+      <h3>✈️ Day 6: Departure</h3>
+      <p>After breakfast, check out and transfer to the airport for your flight back home.</p>
+    </div>
+
+    <!-- Package Section -->
+    <div class="package">
+      <h3>Bali Package Inclusions</h3>
+      <div class="package-cards">
+        <div class="package-card" style="background:#1bbcc5; color:#003c32;">
+          <h4>Inclusions</h4>
+          <p>Daily Breakfast<br>Mount Batur Sunrise Trek<br>Ulun Danu & Handara Gate Tour<br>Nusa Penida West Tour<br>Water Sports at Benoa Bay<br>Finn’s Beach Club Visit<br>Tanah Lot & Uluwatu Sunset Tours<br>All Transfers on Double Sharing Basis</p>
+        </div>
+      </div>
+      <p class="package-note">*Customizable as per traveler needs</p>
+    </div>
+
+  </div>
+
+  <!-- Professional Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-column">
+        <h4>Royal Tourism</h4>
+        <p>We provide safe, comfortable, and memorable travel experiences across India and abroad. Your journey is our responsibility.</p>
+      </div>
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <ul style="padding-left:0; list-style:none;">
+          <li><a href="Home.html">Home</a></li>
+          <li><a href="About.html">About Us</a></li>
+          <li><a href="Northeast.html">Domestic Trips</a></li>
+          <li><a href="Bangkok.html">Bangkok Tour</a></li>
+          <li><a href="Bali.html">Bali Tour</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Contact</h4>
+        <p>📞 +91 8240147994</p>
+        <p>📧 royaltourism863@gmail.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Royal Tourism | All Rights Reserved | Created with ❤️ by Aavriti</p>
+    </div>
+  </footer>
+
+</body>
+</html>

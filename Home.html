@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Royal Tourism</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #bafcff;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* ---------------- TOP CONTACT HEADER ---------------- */
+    .top-header {
+      background-color: #ff610e;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 10px 20px;
+    }
+
+    .contact-group {
+      display: flex;
+      align-items: center;
+      margin-right: 40px;
+    }
+
+    .contact-group img {
+      width: 22px;
+      height: 22px;
+      margin-right: 6px;
+    }
+
+    .contact-group span {
+      font-size: 16px;
+      color: white;
+      font-weight: bold;
+      font-family: monospace;
+    }
+
+    /* ---------------- NAVIGATION BAR ---------------- */
+    .navigation-bar {
+      background-color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 40px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .navigation-bar img {
+      height: 60px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-size: 18px;
+      color: #333;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #ff610e;
+    }
+
+    /* Dropdown */
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: white;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.15);
+      z-index: 10;
+      border-radius: 6px;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      color: #333;
+      font-size: 14px;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f2f2f2;
+      color: #ff610e;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* --- IMAGE INTRO --- */
+    .intro img {
+      width: 1520px;
+      height: 900px;
+    }
+
+    /* ---------------- FEATURE CARDS ---------------- */
+    .feature-section {
+      padding: 60px 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .card-container {
+      display: flex;
+      gap: 60px;           /* ✅ Increased gap between cards */
+      flex-wrap: nowrap;
+      justify-content: center;
+      max-width: none;
+      overflow-x: auto;
+    }
+
+    .card {
+      background: #e16321;
+      color: white;
+      width: 250px;
+      padding: 30px 20px;
+      border-radius: 15px;
+      text-align: center;
+      transition: all 0.4s ease;
+      position: relative;
+      border: 3px solid transparent;   /* ✅ border hidden by default */
+      flex-shrink: 0;                  /* ✅ prevents shrinking */
+    }
+
+    /* Hover: bg #bafcff, text orange, dark teal border */
+    .card:hover {
+      background: #bafcff;
+      color: #e16321;
+      border: 3px solid #004d4d;   /* ✅ dark teal border */
+    }
+
+    .icon-wrapper {
+      background: #fff;
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      margin: 0 auto 20px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.4s;
+    }
+
+    .icon-wrapper img {
+      width: 50px;
+      height: 50px;
+    }
+
+    .circle {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      position: absolute;
+      background: #bafcff;
+      transition: 0.4s;
+    }
+
+    .circle.top {
+      top: -10px;
+      left: -10px;
+    }
+
+    .circle.bottom {
+      bottom: -10px;
+      right: -10px;
+    }
+
+    .card:hover .circle {
+      background: #e16321;
+    }
+
+    .card h3,
+    .card p {
+      margin: 10px 0;
+      transition: color 0.4s ease;
+    }
+
+    .card:hover h3,
+    .card:hover p {
+      color: #e16321;
+    }
+
+    /* ---------------- PROFESSIONAL FOOTER ---------------- */
+    footer {
+      background-color: #003c32;
+      color: #fff;
+      padding: 40px 20px 20px;
+      font-family: Arial, sans-serif;
+    }
+
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-column {
+      flex: 1 1 250px;
+      margin: 10px 20px;
+    }
+
+    .footer-column h4 {
+      margin-bottom: 15px;
+      font-size: 22px;
+      color: #ff610e;
+    }
+
+    .footer-column p,
+    .footer-column a {
+      font-size: 14px;
+      color: #ddd;
+      text-decoration: none;
+      line-height: 1.6;
+    }
+
+    .footer-column a:hover {
+      color: #ff610e;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      border-top: 1px solid #444;
+      margin-top: 20px;
+      padding-top: 10px;
+      font-size: 22px;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top contact header -->
+  <div class="top-header">
+    <div class="contact-group">
+      <img src="Contact.png" alt="Contact">
+      <span>+91 8240147994</span>
+    </div>
+    <div class="contact-group">
+      <img src="E-mail.png" alt="E-mail">
+      <span>royaltourism863@gmail.com</span>
+    </div>
+  </div>
+
+  <!-- Navigation bar -->
+  <div class="navigation-bar">
+    <img src="logohorizontal.png" alt="Royal Tourism Logo">
+    <div class="nav-links">
+      <a href="About.html">About us</a>
+      <div class="dropdown">
+        <a href="#">Domestic Trips</a>
+        <div class="dropdown-content">
+          <a href="North-MH.html">Shirdi–Ellora–Nashik Darshan Tour</a>
+          <a href="GOA.html">Luxury Goa Trip</a>
+          <a href="Northeast.html">Manipur-Mizoram-Nagaland Tour</a>
+        </div>
+      </div>
+       <div class="dropdown">
+        <a href="#">International Trips</a>
+        <div class="dropdown-content">
+          <a href="Bali.html">Bali Tour</a>
+          <a href="Bangkok.html">Bangkok-Pattaya Tour</a>
+        </div>
+      </div>
+      <a href="Contact-us.html">Contact Us</a>
+    </div>
+  </div>
+
+  <!-- Intro Image -->
+  <section class="intro-page">
+    <div class="intro">
+       <img src="intro-page.png" alt="Intro Image">
+    </div>
+  </section>
+
+  <!-- Feature Cards Section -->
+  <section class="feature-section">
+    <div class="card-container">
+      <div class="card">
+        <div class="icon-wrapper">
+          <img src="1.png" alt="Special Activities">
+          <div class="circle top"></div>
+          <div class="circle bottom"></div>
+        </div>
+        <h3>Special Activities</h3>
+        <p>We offer a wide variety of special activities designed to cater to different interests.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon-wrapper">
+          <img src="4.png" alt="Proper Guideline">
+          <div class="circle top"></div>
+          <div class="circle bottom"></div>
+        </div>
+        <h3>Proper Guideline</h3>
+        <p>Following proper travel guidelines ensures safety and efficiency throughout your journey.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon-wrapper">
+          <img src="3.png" alt="Travel Arrangement">
+          <div class="circle top"></div>
+          <div class="circle bottom"></div>
+        </div>
+        <h3>Travel Arrangement</h3>
+        <p>We offer comprehensive travel planning services to handle all the logistics.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon-wrapper">
+          <img src="2.png" alt="Location Manager">
+          <div class="circle top"></div>
+          <div class="circle bottom"></div>
+        </div>
+        <h3>Location Manager</h3>
+        <p>We ensure that all services run efficiently and according to plan.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Professional Footer -->
+  <footer>
+    <div class="footer-container">
+      <!-- About -->
+      <div class="footer-column">
+        <h4>Royal Tourism</h4>
+        <p>We provide safe, comfortable, and memorable travel experiences across India. 
+        Your journey is our responsibility.</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="About-us.html">About Us</a></li>
+          <li><a href="Contact-us.html">Contact Us</a></li>
+          <li><a href="North-MH.html">Trips</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="footer-column">
+        <h4>Contact</h4>
+        <p>📞 +91 8240147994</p>
+        <p>📧 royaltourism863@gmail.com</p>
+      </div>
+    </div>
+
+    <!-- Bottom line -->
+    <div class="footer-bottom">
+      <p>© 2025 Royal Tourism | All Rights Reserved | Created with ❤️ by Aavriti</p>
+    </div>
+  </footer>
+
+</body>
+</html>

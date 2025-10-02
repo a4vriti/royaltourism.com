@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Royal Tourism - Luxury Goa & Beyond Tour</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #bafcff;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* ---------------- TOP CONTACT HEADER ---------------- */
+    .top-header {
+      background-color: #ff610e;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 10px 20px;
+    }
+
+    .contact-group {
+      display: flex;
+      align-items: center;
+      margin-right: 40px;
+    }
+
+    .contact-group img {
+      width: 22px;
+      height: 22px;
+      margin-right: 6px;
+    }
+
+    .contact-group span {
+      font-size: 16px;
+      color: white;
+      font-weight: bold;
+      font-family: monospace;
+    }
+
+    /* ---------------- NAVIGATION BAR ---------------- */
+    .navigation-bar {
+      background-color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 40px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .navigation-bar img {
+      height: 60px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-size: 18px;
+      color: #333;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #ff610e;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: white;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.15);
+      z-index: 10;
+      border-radius: 6px;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      color: #333;
+      font-size: 14px;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f2f2f2;
+      color: #ff610e;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* ---------------- ITINERARY SECTION ---------------- */
+    .itinerary {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .itinerary h2 {
+      text-align: center;
+      color: #003c32;
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
+
+    .day-card {
+      background: white;
+      border-left: 6px solid #ff610e;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .day-card:hover {
+      transform: scale(1.02);
+    }
+
+    .day-card h3 {
+      color: #007278;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 22px;
+    }
+
+    .day-card p {
+      color: #333;
+      line-height: 1.6;
+      margin-left: 28px;
+      font-size: 20px;
+    }
+
+    /* ---------------- PACKAGE SECTION ---------------- */
+    .package h3 {
+      text-align: center;
+      color: #003c32;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .package-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .package-card {
+      padding: 20px;
+      border-radius: 10px;
+      width: 220px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .package-card h4 {
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    .package-card p {
+      margin: 10px 0;
+      font-size: 16px;
+    }
+
+    .package-note {
+      text-align: center;
+      margin-top: 15px;
+      font-style: italic;
+      color: #003c32;
+    }
+
+    /* ---------------- PROFESSIONAL FOOTER ---------------- */
+    footer {
+      background-color: #003c32;
+      color: #fff;
+      padding: 40px 20px 20px;
+      font-family: Arial, sans-serif;
+    }
+
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-column {
+      flex: 1 1 250px;
+      margin: 10px;
+    }
+
+    .footer-column h4 {
+      margin-bottom: 15px;
+      font-size: 22px;
+      color: #ff610e;
+    }
+
+    .footer-column p,
+    .footer-column a {
+      font-size: 14px;
+      color: #ddd;
+      text-decoration: none;
+      line-height: 1.6;
+    }
+
+    .footer-column a:hover {
+      color: #ff610e;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      border-top: 1px solid #444;
+      margin-top: 20px;
+      padding-top: 10px;
+      font-size: 20px;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top contact header -->
+  <div class="top-header">
+    <div class="contact-group">
+      <img src="Contact.png" alt="Contact">
+      <span>+91 8240147994</span>
+    </div>
+    <div class="contact-group">
+      <img src="E-mail.png" alt="E-mail">
+      <span>royaltourism863@gmail.com</span>
+    </div>
+  </div>
+
+  <!-- Navigation bar -->
+  <div class="navigation-bar">
+    <img src="logohorizontal.png" alt="Royal Tourism Logo">
+    <div class="nav-links">
+      <a href="Home.html">Home</a>
+      <a href="About.html">About us</a>
+      <div class="dropdown">
+        <a href="#">Domestic Trips</a>
+        <div class="dropdown-content">
+          <a href="NORTH-MH.html">Shirdi–Ellora–Nashik Darshan Tour</a>
+          <a href="Northeast.html">Nagaland - Mizoram - Manipur Trip</a>
+          <a href="GOA.html">Luxury Goa Tour</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="#">International Trips</a>
+        <div class="dropdown-content">
+          <a href="Bali.html">Bali Tour</a>
+          <a href="Bangkok.html">Bangkok-Pattaya Tour</a>
+        </div>
+      </div>
+      <a href="Contact-us.html">Contact Us</a>
+    </div>
+  </div>
+
+  <!-- Itinerary Section -->
+  <div class="itinerary">
+    <h2>Coastal Karnataka-Goa Tour</h2>
+
+    <div class="day-card">
+      <h3>🚆 Day 1: 25 Sept – Departure</h3>
+      <p>Board Train 22851 from Santragachi Station at 2:55 PM (Thursday) for Mangalore.</p>
+    </div>
+
+    <div class="day-card">
+      <h3>🌅 Day 3: 27 Sept – Arrival & Sightseeing</h3>
+      <p>Morning pick-up from Mangalore railway station. Check in, freshen up, and proceed to <strong>Mahatobhara Sri Mangaladevi Temple</strong>, <strong>Kadri Shree Manjunatha Temple</strong>, <strong>Kudroli</strong>, <strong>St. Aloysius Chapel</strong>, and <strong>Panambur Beach</strong>. Overnight stay at Mangalore.</p>
+    </div>
+
+    <div class="day-card">
+      <h3>🏖️ Day 4: 28 Sept – Udupi (1 Night)</h3>
+      <p>After breakfast, proceed to Udupi. Visit <strong>Sri Krishna Math</strong> and <strong>Malpe Beach</strong>. Overnight stay in Udupi.</p>
+    </div>
+
+    <div class="day-card">
+      <h3>🌊 Day 5: 29 Sept – Udupi → Murdeshwar → Honavar → Gokarna (3 Nights)</h3>
+      <p>Proceed to Gokarna. Visit <strong>Om Beach</strong> (water sports at own cost), <strong>Mahabaleshwar Temple</strong>, enjoy a walking tour of Gokarna, and end with a <strong>sunset at Gokarna Beach</strong>. Overnight stay in Gokarna.</p>
+    </div>
+
+    <div class="day-card">
+      <h3>🍹 Day 6: 30 Sept – Gokarna → Goa</h3>
+      <p>Take a bus from Gokarna to Madgaon (4.5 hrs). From Madgaon, travel by cab to North Goa. Evening at leisure. Overnight stay in Goa.</p>
+    </div>
+
+    <div class="day-card">
+      <h3>🚗 Day 7: 1 Oct – Goa → Nashik</h3>
+      <p>Transfer from Goa to Nashik (10-hour drive). Overnight stay in Nashik.</p>
+    </div>
+
+    <div class="day-card">
+      <h3>🛕 Day 8: 2 Oct – Nashik → Trimbakeshwar → Shirdi</h3>
+      <p>Visit <strong>Trimbakeshwar Jyotirlinga Temple</strong>, then proceed to Shirdi. Check in, relax, and visit <strong>Sai Baba Temple</strong>. Overnight stay in Shirdi.</p>
+    </div>
+
+    <div class="day-card">
+      <h3>🏞️ Day 9: 3 Oct – Shirdi → Ajanta → Aurangabad</h3>
+      <p>Check out and visit <strong>Ajanta Caves</strong>. Proceed to Aurangabad and check in. Overnight stay in Aurangabad.</p>
+    </div>
+
+    <div class="day-card">
+      <h3>🕌 Day 10: 4 Oct – Aurangabad → Grishneshwar → Ellora → Drop</h3>
+      <p>Visit <strong>Grishneshwar Jyotirlinga</strong>, then explore <strong>Ellora Caves</strong>. Drop at Aurangabad station/airport.</p>
+    </div>
+
+    <!-- Package Section -->
+    <div class="package">
+      <h3>Package Price & Inclusions</h3>
+      <div class="package-cards">
+        <div class="package-card" style="background:#1bbcc5; color:#003c32;">
+          <h4>Total Package Cost</h4>
+          <p style="font-weight:bold; font-size:20px;">₹15,000 per head</p>
+          <p> AC Traveller for pick-up, drop & sightseeing<br>Comfortable hotel stays<br>Breakfast included<br>Tolls & Taxes included</p>
+        </div>
+      </div>
+      <p class="package-note">*Price applicable for minimum 2 travelers</p>
+    </div>
+  </div>
+
+  <!-- Professional Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-column">
+        <h4>Royal Tourism</h4>
+        <p>We provide safe, comfortable, and memorable travel experiences across India. Your journey is our responsibility.</p>
+      </div>
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <ul style="padding-left:0; list-style:none;">
+          <li><a href="Home.html">Home</a></li>
+          <li><a href="About.html">About Us</a></li>
+          <li><a href="Northeast.html">Domestic Trips</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Contact</h4>
+        <p>📞 +91 8240147994</p>
+        <p>📧 royaltourism863@gmail.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Royal Tourism | All Rights Reserved | Created with ❤️ by Aavriti</p>
+    </div>
+  </footer>
+
+</body>
+</html>
